@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  service:
+    build: .
+    depends_on: 
+      - db
+    ports: 
+      - 8081:8081
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: password
+    ports: 
+      - 5432:5432
+
+volumes:
+  database_data:
+    driver: local
