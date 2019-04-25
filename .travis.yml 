@@ -5,6 +5,9 @@ language: go
 os:
     - linux
 
+go: 
+  - 1.12.4
+
 before_script:
   - go get -u github.com/gorilla/mux
   - go get -u github.com/ethereum/go-ethereum
