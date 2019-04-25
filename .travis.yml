@@ -19,5 +19,4 @@ before_script:
     - go get -u github.com/lib/pq
 
 script:
-    - go test ./...
     - go build -o service ./src/main/main.go
