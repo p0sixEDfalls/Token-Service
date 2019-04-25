@@ -1,23 +1,17 @@
-dist:   xenial
+dist:     xenial 
 
-language:   go
-
-go:
- - 1.12.x
+language: go    
 
 os:
- - linux
-
-notifications:
-    email: false
+    - linux
 
 before_script:
- - go get -u github.com/gorilla/mux
- - go get -u github.com/ethereum/go-ethereum
- - go get -u github.com/jinzhu/gorm
- - go get -u github.com/dgrijalva/jwt-go
- - go get -u github.com/lib/pq
+  - go get -u github.com/gorilla/mux
+  - go get -u github.com/ethereum/go-ethereum
+  - go get -u github.com/jinzhu/gorm
+  - go get -u github.com/dgrijalva/jwt-go
+  - go get -u github.com/lib/pq
 
 script:
- - go test -v -race ./...
- - go build -o service ./src/main/main.go
+  - go test -v -race ./...
+  - go build -o service ./src/main/main.go
