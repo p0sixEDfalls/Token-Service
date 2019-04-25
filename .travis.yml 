@@ -1,11 +1,11 @@
-dist:     xenial 
+dist: xenial
 
-language: go    
+language: go
 
 os:
-    - linux
+  - linux
 
-go: 
+go:
   - 1.12.4
 
 before_script:
