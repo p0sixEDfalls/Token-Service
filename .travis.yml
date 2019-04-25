@@ -2,8 +2,7 @@ dist: xenial
 language: go
 
 env:
-    - GO11MODULE=on
-    - GOFLAGS='-mod vendor'
+    - GO11MODULE=off
 
 go:
     - 1.12.4
