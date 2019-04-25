@@ -4,6 +4,8 @@ language: go
 go:
     - 1.12.4
 
+install: false
+
 before_script:
     - go get -u github.com/gorilla/mux
     - go get -u github.com/ethereum/go-ethereum
