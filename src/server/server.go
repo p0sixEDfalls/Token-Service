@@ -64,7 +64,6 @@ func checkToken(cookie *http.Cookie) bool {
 	return true
 }
 
-//GetClaimFromToken CALL AFTER checkToken() ONLY
 func GetClaimFromToken(cookie *http.Cookie) Claims {
 	tknStr := cookie.Value
 
@@ -302,7 +301,6 @@ func sendToken(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, string(txHashD))
 }
 
-//HandleRequests - listen port
 func HandleRequests() bool {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/reguser", regUser).Methods("POST")

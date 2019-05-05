@@ -12,7 +12,6 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 )
 
-//AddInvestor fgt  g
 func AddInvestor(login, password string) bool {
 	if database.AddInvestor(login, password) {
 		return true
@@ -20,7 +19,6 @@ func AddInvestor(login, password string) bool {
 	return false
 }
 
-//GenerateNewKey rtg  rg
 func GenerateNewKey(login string) string {
 	privateKey, err := crypto.GenerateKey()
 	if err != nil {
@@ -39,7 +37,6 @@ func GenerateNewKey(login string) string {
 	return address
 }
 
-//CheckCredits rsg fd h
 func CheckCredits(login, password string) bool {
 	if database.CheckCredits(login, password) {
 		return true
@@ -48,7 +45,6 @@ func CheckCredits(login, password string) bool {
 	return false
 }
 
-//GetUserAddress rfgt df gdf
 func GetUserAddress(login string) string {
 	address := database.GetUserAddress(login)
 	return address

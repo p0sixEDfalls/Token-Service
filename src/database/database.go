@@ -15,7 +15,6 @@ type investor struct {
 	PrivKey  string
 }
 
-//AddInvestor fdg dfg
 func AddInvestor(login, password string) bool {
 	db, err := gorm.Open("postgres", "host=db port=5432 user=postgres dbname=postgres password=password sslmode=disable")
 	if err != nil {
@@ -30,7 +29,6 @@ func AddInvestor(login, password string) bool {
 	return true
 }
 
-//AddUserPrivKey heh heh
 func AddUserPrivKey(privkey, login string) bool {
 	db, err := gorm.Open("postgres", "host=db port=5432 user=postgres dbname=postgres password=password sslmode=disable")
 	if err != nil {
@@ -54,7 +52,6 @@ func AddUserPrivKey(privkey, login string) bool {
 	return false
 }
 
-//CheckCredits r hgfh f tyh
 func CheckCredits(login, password string) bool {
 	db, err := gorm.Open("postgres", "host=db port=5432 user=postgres dbname=postgres password=password sslmode=disable")
 	if err != nil {
@@ -76,7 +73,6 @@ func CheckCredits(login, password string) bool {
 	return true
 }
 
-//GetUserAddress gfd  sfg
 func GetUserAddress(login string) string {
 	db, err := gorm.Open("postgres", "host=db port=5432 user=postgres dbname=postgres password=password sslmode=disable")
 	if err != nil {
@@ -109,7 +105,6 @@ func GetUserAddress(login string) string {
 	return address
 }
 
-//Init g
 func Init() bool {
 	db, err := gorm.Open("postgres", "host=db port=5432 user=postgres dbname=postgres password=password sslmode=disable")
 	if err != nil {
